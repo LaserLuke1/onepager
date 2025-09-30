@@ -14,6 +14,7 @@ document.documentElement.setAttribute('data-theme', currentTheme);
 	--border-color: rgba(55, 53, 47, 0.09);
 	--table-header-bg: rgb(247, 246, 243);
 	--link-color: inherit;
+	--accent-color: #000000;
 }
 
 [data-theme="dark"] {
@@ -22,6 +23,7 @@ document.documentElement.setAttribute('data-theme', currentTheme);
 	--border-color: rgba(255, 255, 255, 0.15);
 	--table-header-bg: #2a2a2a;
 	--link-color: #60a5fa;
+	--accent-color: #ffffff;
 }
 
 html {
@@ -136,35 +138,82 @@ body {
 /* Dark mode toggle button */
 .theme-toggle {
 	position: fixed;
-	top: 20px;
+	bottom: 20px;
 	right: 20px;
-	background: var(--text-color);
-	color: var(--bg-color);
-	border: 2px solid var(--border-color);
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
-	font-size: 24px;
+	background: transparent;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+	border-radius: 4px;
+	width: 44px;
+	height: 44px;
+	font-size: 20px;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease;
 	z-index: 1000;
-	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	backdrop-filter: blur(10px);
 }
 
 .theme-toggle:hover {
-	transform: scale(1.1);
+	background: var(--text-color);
+	color: var(--bg-color);
 }
 
 @media only screen and (max-width: 768px) {
 	.theme-toggle {
-		width: 45px;
-		height: 45px;
-		font-size: 20px;
-		top: 15px;
+		width: 40px;
+		height: 40px;
+		font-size: 18px;
+		bottom: 15px;
 		right: 15px;
+	}
+}
+
+/* TLDR button */
+.tldr-button {
+	position: fixed;
+	bottom: 75px;
+	right: 20px;
+	background: transparent;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+	border-radius: 4px;
+	padding: 10px 16px;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	transition: all 0.2s ease;
+	z-index: 1000;
+	backdrop-filter: blur(10px);
+}
+
+.tldr-button:hover {
+	background: var(--text-color);
+	color: var(--bg-color);
+}
+
+.tldr-content {
+	background: var(--table-header-bg);
+	border-left: 4px solid var(--accent-color);
+	padding: 1.5em;
+	margin: 1em 0;
+	border-radius: 8px;
+	line-height: 1.8;
+}
+
+@media only screen and (max-width: 768px) {
+	.tldr-button {
+		bottom: 65px;
+		right: 15px;
+		padding: 8px 12px;
+		font-size: 11px;
 	}
 }
 
@@ -841,13 +890,17 @@ blockquote.quote-large {
 <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
 	<span id="theme-icon">🌙</span>
 </button>
+<button class="tldr-button" onclick="scrollToTLDR()" aria-label="Jump to TL;DR">
+	<span>⚡</span>
+	<span>TL;DR</span>
+</button>
 <article id="27d1afee-8e0d-80aa-aff3-cd836232f9c2" class="page sans"><header><img class="page-cover-image" src="assets/CW_Lobby_V9.webp" style="object-position:center 30%; object-fit: cover;"/>
 <h1 class="page-title">Luke Hildreth</h1><p class="page-description"></p></header>
 
 <div class="page-body">
 <p id="27d1afee-8e0d-8009-9aca-d3c2bd7f584b" class="">Creative Technologist &amp; Real-Time Designer</p>
 <p id="27d1afee-8e0d-8075-b49c-d34d5155b956" class="">📍 Brooklyn, NY<span class="hide-mobile"> | ✈️ Open to Travel</span> | 🌐 <a href="http://www.lukehildreth.com" target="_blank">lukehildreth.com</a></p>
-<p id="27d1afee-8e0d-80f4-b67e-ce8234e136a9" class="">📩 luke@artprojectllc.com | 🔗 <a href="https://www.linkedin.com/in/lukehildreth" target="_blank">linkedin.com/in/lukehildreth</a> | IG: <a href="https://www.instagram.com/laser.luke.one" target="_blank">@laser.luke.one</a></p>
+<p id="27d1afee-8e0d-80f4-b67e-ce8234e136a9" class="">📩 <a href="mailto:luke@artprojectllc.com">luke@artprojectllc.com</a> | 🔗 <a href="https://www.linkedin.com/in/lukehildreth" target="_blank">linkedin.com/in/lukehildreth</a> | IG: <a href="https://www.instagram.com/laser.luke.one" target="_blank">@laser.luke.one</a></p>
 <hr id="27d1afee-8e0d-80b7-a6e5-cb5f8c93e4a1"/>
 <h2 id="27d1afee-8e0d-80bb-832a-d671a5b53b5b" class="">✍️ Summary</h2>
 <p id="27d1afee-8e0d-8032-a494-f831a2e40025" class="">Luke is a <strong>multidisciplinary creative technologist</strong> specializing in <strong>immersive brand activations</strong>, <strong>interactive installations</strong>, and <strong>real-time content</strong> for <strong>live events</strong>. He brings <strong>in-house experience</strong> at <strong>top experiential agencies</strong> and extensive <strong>on-set production work</strong> across <strong>advertising</strong>, <strong>commercial</strong>, and <strong>live event projects</strong>. Fluent in <strong>TouchDesigner</strong>, <strong>Adobe Creative Suite</strong>, and <strong>motion design</strong>, he bridges <strong>creative vision</strong> and <strong>technical execution</strong> to deliver <strong>unforgettable audience experiences</strong>.</p>
@@ -876,7 +929,17 @@ blockquote.quote-large {
 <ul id="27d1afee-8e0d-8031-ab3c-c4ac1bf55b7f" class="bulleted-list"><li style="list-style-type:disc">LinkedIn: <a href="https://www.linkedin.com/in/lukehildreth" target="_blank">linkedin.com/in/lukehildreth</a></li></ul>
 <ul id="27d1afee-8e0d-8001-8ee1-f45115204fcf" class="bulleted-list"><li style="list-style-type:disc">Resume (PDF): <a href="https://tinyurl.com/mr22jr2f" target="_blank">LukeResume</a></li></ul>
 <ul id="27d1afee-8e0d-80d7-9156-fa04fa5a4cb3" class="bulleted-list"><li style="list-style-type:disc">Instagram: <a href="https://www.instagram.com/laser.luke.one" target="_blank">@laser.luke.one</a></li></ul>
-<hr id="27d1afee-8e0d-8061-a8d1-e17b4c1268fb"/><p id="27d1afee-8e0d-8091-a660-e2173aa10d47" class=""><em>✨ Open to freelance and full-time roles in creative technology, experiential design, and live event production. Let&#x27;s create something unforgettable!</em></p>
+<hr id="27d1afee-8e0d-8061-a8d1-e17b4c1268fb"/>
+<h2 id="tldr" class="">⚡ TL;DR</h2>
+<p class="tldr-content">
+<strong>Who:</strong> Creative Technologist specializing in immersive brand activations and real-time content<br/>
+<strong>What:</strong> Design and development of interactive installations, content for live events<br/>
+<strong>Where:</strong> Brooklyn, NYC (open to travel)<br/>
+<strong>Rate:</strong> $850/day | $85-125/hr<br/>
+<strong>Contact:</strong> <a href="mailto:luke@artprojectllc.com">luke@artprojectllc.com</a>
+</p>
+<hr/>
+<p id="27d1afee-8e0d-8091-a660-e2173aa10d47" class=""><em>✨ Open to freelance and full-time roles in creative technology, experiential design, and live event production. Let&#x27;s create something unforgettable!</em></p>
 <p id="27d1afee-8e0d-8004-8bd1-c73757142e5b" class="">
 </p></div></article>
 <span class="sans" style="font-size:14px;padding-top:2em"></span>
@@ -893,6 +956,13 @@ function toggleTheme() {
 	// Update icon
 	const icon = document.getElementById('theme-icon');
 	icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+}
+
+function scrollToTLDR() {
+	const tldr = document.getElementById('tldr');
+	if (tldr) {
+		tldr.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
 }
 
 // Set initial icon based on theme
