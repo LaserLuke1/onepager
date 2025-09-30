@@ -1,8 +1,34 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><title>Luke Hildreth – One-pager</title><link rel="icon" type="image/png" href="assets/logo.png"/><meta property="og:title" content="Luke Hildreth - Creative Technologist & Real-Time Designer"/><meta property="og:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta property="og:image" content="assets/CW_Lobby_V9.webp"/><meta property="og:url" content="http://www.lukehildreth.com"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Luke Hildreth - Creative Technologist & Real-Time Designer"/><meta name="twitter:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta name="twitter:image" content="assets/CW_Lobby_V9.webp"/><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><title>Luke Hildreth – One-pager</title><link rel="icon" type="image/png" href="assets/logo.png"/>
+<script>
+// Check for saved theme preference or default to light mode
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+</script><meta property="og:title" content="Luke Hildreth - Creative Technologist & Real-Time Designer"/><meta property="og:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta property="og:image" content="assets/CW_Lobby_V9.webp"/><meta property="og:url" content="http://www.lukehildreth.com"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Luke Hildreth - Creative Technologist & Real-Time Designer"/><meta name="twitter:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta name="twitter:image" content="assets/CW_Lobby_V9.webp"/><style>
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
+
+/* Color scheme variables */
+:root {
+	--bg-color: #ffffff;
+	--text-color: rgb(55, 53, 47);
+	--border-color: rgba(55, 53, 47, 0.09);
+	--table-header-bg: rgb(247, 246, 243);
+	--link-color: inherit;
+}
+
+[data-theme="dark"] {
+	--bg-color: #1a1a1a;
+	--text-color: #e8e6e3;
+	--border-color: rgba(255, 255, 255, 0.15);
+	--table-header-bg: #2a2a2a;
+	--link-color: #60a5fa;
+}
+
 html {
 	-webkit-print-color-adjust: exact;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 * {
 	box-sizing: border-box;
@@ -13,12 +39,14 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 }
 @media only screen {
 	body {
 		margin: 2em auto;
 		max-width: 900px;
-		color: rgb(55, 53, 47);
+		color: var(--text-color);
 	}
 }
 
@@ -105,6 +133,41 @@ body {
 	}
 }
 
+/* Dark mode toggle button */
+.theme-toggle {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: var(--text-color);
+	color: var(--bg-color);
+	border: 2px solid var(--border-color);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	z-index: 1000;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.theme-toggle:hover {
+	transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+	.theme-toggle {
+		width: 45px;
+		height: 45px;
+		font-size: 20px;
+		top: 15px;
+		right: 15px;
+	}
+}
+
 a,
 a.visited {
 	color: inherit;
@@ -185,7 +248,7 @@ hr {
 	height: 1px;
 	visibility: visible;
 	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	border-bottom: 1px solid var(--border-color);
 }
 
 img {
@@ -257,7 +320,7 @@ img {
 table,
 th,
 td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
+	border: 1px solid var(--border-color);
 	border-collapse: collapse;
 }
 
@@ -276,7 +339,8 @@ td {
 }
 
 th {
-	color: rgba(55, 53, 47, 0.6);
+	color: var(--text-color);
+	opacity: 0.7;
 }
 
 ol,
@@ -386,8 +450,8 @@ ol > li {
 }
 
 .simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
+	background: var(--table-header-bg);
+	color: var(--text-color);
 }
 .simple-table-header {
 	font-weight: 500;
@@ -774,6 +838,9 @@ blockquote.quote-large {
 </style>
 </head>
 <body>
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+	<span id="theme-icon">🌙</span>
+</button>
 <article id="27d1afee-8e0d-80aa-aff3-cd836232f9c2" class="page sans"><header><img class="page-cover-image" src="assets/CW_Lobby_V9.webp" style="object-position:center 30%; object-fit: cover;"/>
 <h1 class="page-title">Luke Hildreth</h1><p class="page-description"></p></header>
 
@@ -812,5 +879,28 @@ blockquote.quote-large {
 <hr id="27d1afee-8e0d-8061-a8d1-e17b4c1268fb"/><p id="27d1afee-8e0d-8091-a660-e2173aa10d47" class=""><em>✨ Open to freelance and full-time roles in creative technology, experiential design, and live event production. Let&#x27;s create something unforgettable!</em></p>
 <p id="27d1afee-8e0d-8004-8bd1-c73757142e5b" class="">
 </p></div></article>
-<span class="sans" style="font-size:14px;padding-top:2em"></span></body>
+<span class="sans" style="font-size:14px;padding-top:2em"></span>
+
+<script>
+function toggleTheme() {
+	const html = document.documentElement;
+	const currentTheme = html.getAttribute('data-theme');
+	const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+	
+	html.setAttribute('data-theme', newTheme);
+	localStorage.setItem('theme', newTheme);
+	
+	// Update icon
+	const icon = document.getElementById('theme-icon');
+	icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+}
+
+// Set initial icon based on theme
+window.addEventListener('DOMContentLoaded', () => {
+	const currentTheme = document.documentElement.getAttribute('data-theme');
+	const icon = document.getElementById('theme-icon');
+	icon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+});
+</script>
+</body>
 </html>
