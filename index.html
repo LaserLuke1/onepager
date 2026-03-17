@@ -3,7 +3,7 @@
 // Check for saved theme preference or default to light mode
 const currentTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.setAttribute('data-theme', currentTheme);
-</script><meta property="og:title" content="Luke Hildreth - Creative Technologist & Real-Time Designer"/><meta property="og:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta property="og:image" content="assets/CW_Lobby_V9.webp"/><meta property="og:url" content="http://www.lukehildreth.com"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Luke Hildreth - Creative Technologist & Real-Time Designer"/><meta name="twitter:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta name="twitter:image" content="assets/CW_Lobby_V9.webp"/><style>
+</script><meta property="og:title" content="Luke Hildreth - Creative Technologist & Experiential Systems Designer"/><meta property="og:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta property="og:image" content="assets/CW_Lobby_V9.webp"/><meta property="og:url" content="http://www.artprojectllc.com"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Luke Hildreth - Creative Technologist & Experiential Systems Designer"/><meta name="twitter:description" content="Multidisciplinary creative technologist specializing in immersive brand activations, interactive installations, and real-time content for live events."/><meta name="twitter:image" content="assets/CW_Lobby_V9.webp"/><style>
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 
@@ -168,52 +168,6 @@ body {
 		font-size: 18px;
 		bottom: 15px;
 		right: 15px;
-	}
-}
-
-/* TLDR button */
-.tldr-button {
-	position: fixed;
-	bottom: 75px;
-	right: 20px;
-	background: transparent;
-	color: var(--text-color);
-	border: 1px solid var(--text-color);
-	border-radius: 4px;
-	padding: 10px 16px;
-	font-size: 12px;
-	font-weight: 500;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	transition: all 0.2s ease;
-	z-index: 1000;
-	backdrop-filter: blur(10px);
-}
-
-.tldr-button:hover {
-	background: var(--text-color);
-	color: var(--bg-color);
-}
-
-.tldr-content {
-	background: var(--table-header-bg);
-	border-left: 4px solid var(--accent-color);
-	padding: 1.5em;
-	margin: 1em 0;
-	border-radius: 8px;
-	line-height: 1.8;
-}
-
-@media only screen and (max-width: 768px) {
-	.tldr-button {
-		bottom: 65px;
-		right: 15px;
-		padding: 8px 12px;
-		font-size: 11px;
 	}
 }
 
@@ -461,6 +415,32 @@ ol > li {
 
 .toggle > li > details > summary {
 	margin-left: -1.1em;
+}
+
+/* Capabilities: line break between bullets */
+.capabilities-list li {
+	margin-bottom: 0.75em;
+}
+
+.capabilities-list li:last-child {
+	margin-bottom: 0;
+}
+
+/* Selected Work: more vertical spacing between projects */
+.selected-work p {
+	margin-bottom: 1.25em;
+}
+
+.selected-work p:last-child {
+	margin-bottom: 0;
+}
+
+.selected-work p:has(strong) {
+	margin-top: 1.25em;
+}
+
+.selected-work p:has(strong):first-child {
+	margin-top: 0;
 }
 
 .selected-value {
@@ -887,59 +867,47 @@ blockquote.quote-large {
 </style>
 </head>
 <body>
-<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-	<span id="theme-icon">🌙</span>
-</button>
-<button class="tldr-button" onclick="scrollToTLDR()" aria-label="Jump to TL;DR">
-	<span>⚡</span>
-	<span>TL;DR</span>
-</button>
+<!-- Theme toggle (hidden): re-add button with class="theme-toggle" onclick="toggleTheme()" and span id="theme-icon" to re-enable -->
 <article id="27d1afee-8e0d-80aa-aff3-cd836232f9c2" class="page sans"><header><img class="page-cover-image" src="assets/CW_Lobby_V9.webp" style="object-position:center 30%; object-fit: cover;"/>
 <h1 class="page-title">Luke Hildreth</h1><p class="page-description"></p></header>
 
 <div class="page-body">
-<p id="27d1afee-8e0d-8009-9aca-d3c2bd7f584b" class="">Creative Technologist &amp; Real-Time Designer</p>
-<p id="27d1afee-8e0d-8075-b49c-d34d5155b956" class="">📍 Brooklyn, NY<span class="hide-mobile"> | ✈️ Open to Travel</span> | 🌐 <a href="http://www.lukehildreth.com" target="_blank">lukehildreth.com</a></p>
+<p id="27d1afee-8e0d-8009-9aca-d3c2bd7f584b" class="">Creative Technologist &amp; Experiential Systems Designer<br/>Interactive Systems • Real-Time Environments • Live Events</p>
+<p id="27d1afee-8e0d-8075-b49c-d34d5155b956" class="">🌐 <a href="http://www.artprojectllc.com" target="_blank">artprojectllc.com</a></p>
 <p id="27d1afee-8e0d-80f4-b67e-ce8234e136a9" class="">📩 <a href="mailto:luke@artprojectllc.com">luke@artprojectllc.com</a> | 🔗 <a href="https://www.linkedin.com/in/lukehildreth" target="_blank">linkedin.com/in/lukehildreth</a> | IG: <a href="https://www.instagram.com/laser.luke.one" target="_blank">@laser.luke.one</a></p>
 <hr id="27d1afee-8e0d-80b7-a6e5-cb5f8c93e4a1"/>
 <h2 id="27d1afee-8e0d-80bb-832a-d671a5b53b5b" class="">✍️ Summary</h2>
-<p id="27d1afee-8e0d-8032-a494-f831a2e40025" class="">Luke is a <strong>multidisciplinary creative technologist</strong> specializing in <strong>immersive brand activations</strong>, <strong>interactive installations</strong>, and <strong>real-time content</strong> for <strong>live events</strong>. He brings <strong>in-house experience</strong> at <strong>top experiential agencies</strong> and extensive <strong>on-set production work</strong> across <strong>advertising</strong>, <strong>commercial</strong>, and <strong>live event projects</strong>. Fluent in <strong>TouchDesigner</strong>, <strong>Adobe Creative Suite</strong>, and <strong>motion design</strong>, he bridges <strong>creative vision</strong> and <strong>technical execution</strong> to deliver <strong>unforgettable audience experiences</strong>.</p>
+<p id="27d1afee-8e0d-8032-a494-f831a2e40025" class="">I design &amp; build real-time interactive systems for live events, brand activations, and public installations.</p>
+<p class="">My work focuses on translating physical interaction into gameplay and live visual feedback, building multiplayer environments, sensor-driven installations, and large-scale responsive systems.</p>
+<p class="">Most recently, I led development of a multiplayer interactive installation for Super Bowl LX (PepsiCo), designing a real-time system for high-throughput public interaction and live gameplay feedback in a high-pressure event environment.</p>
 <hr id="27d1afee-8e0d-8044-96da-d3ba0c71d096"/>
-<h2 id="27d1afee-8e0d-8034-84e4-ce5da2fccf48" class="">🧰 Core Skills</h2>
-<table id="27d1afee-8e0d-80e8-b9e7-e6af35539840" class="simple-table"><thead class="simple-table-header"><tr id="27d1afee-8e0d-80f9-8f20-e0220af03953"><th id=";Q@|" class="simple-table-header-color simple-table-header">Motion Graphics &amp; Interactive</th><th id="~yBU" class="simple-table-header-color simple-table-header">Technical &amp; Systems</th><th id="eN&gt;P" class="simple-table-header-color simple-table-header">Production &amp; Ops</th><th id="@JGg" class="simple-table-header-color simple-table-header">Creative Direction</th></tr></thead><tbody><tr id="27d1afee-8e0d-8098-93a9-d0fac44c24a7"><td id=";Q@|" class=""><strong>Software &amp; Tools: </strong>Adobe Creative Suite (After Effects, Premiere Pro, Photoshop, Illustrator), TouchDesigner, Notch</td><td id="~yBU" class=""><strong>Media Servers:</strong> Disguise, Resolume, <strong>Show Control:</strong> Timecode, Playback Systems</td><td id="eN&gt;P" class=""><strong>On-Site</strong>: Live Event Technical Direction, Visuals &amp; Laser Operation, On-Set Production Support</td><td id="@JGg" class=""><strong>Conceptual</strong>: Concept Development, Storyboarding</td></tr><tr id="27d1afee-8e0d-804c-87f1-ccbc6ed6c246"><td id=";Q@|" class=""><strong>Techniques</strong>: Motion Graphics, Real-Time Visuals, Projection Mapping, LED Volumes, Generative &amp; Procedural Design</td><td id="~yBU" class=""><strong>Protocols</strong>: Networking (LAN/Wi-Fi), MIDI, OSC, DMX, Art-Net, Pixel Mapping, Laser Control</td><td id="eN&gt;P" class=""><strong>Ops</strong>: Playback &amp; Timecode Programming, Crew Collaboration, Workflow Optimization</td><td id="@JGg" class=""><strong>Design</strong>: Interactive Experience Design, Brand Experience Design</td></tr><tr id="27e1afee-8e0d-8096-8e0e-df9c56734586"><td id=";Q@|" class=""><strong>Programming</strong>: Python, GLSL, Shader Development, GenAI Tools (MidJourney, Stable Diffusion, Stream Diffusion, RunwayML, ComfyUI, ChatGPT, Gemini)</td><td id="~yBU" class=""><strong>Systems</strong>: Prototyping, Systems Integration, R&amp;D</td><td id="eN&gt;P" class=""></td><td id="@JGg" class=""></td></tr></tbody></table>
+<h2 id="27d1afee-8e0d-8034-84e4-ce5da2fccf48" class="">🧰 Capabilities</h2>
+<ul class="bulleted-list capabilities-list"><li style="list-style-type:disc">Designing and developing real-time interactive systems for live environments</li><li style="list-style-type:disc">Building multiplayer and sensor-driven installations</li><li style="list-style-type:disc">Creating responsive visual systems for LED, projection, and media servers</li><li style="list-style-type:disc">Integrating hardware, software, and control protocols (OSC, MIDI, DMX, Art-Net)</li><li style="list-style-type:disc">Leading technical execution for live events, brand activations, and installations</li></ul>
 <hr id="27d1afee-8e0d-8020-9c45-d08382858af2"/>
 <h2 id="27d1afee-8e0d-8045-8285-ee7e0278df4d" class="">🎯 Target Roles</h2>
-<p id="27d1afee-8e0d-80e4-a96a-f285c467b345" class="">Creative Technologist • TouchDesigner Developer • Experiential Designer • Interactive Producer • Technical Director • Real-Time Artist</p>
+<ul class="bulleted-list"><li style="list-style-type:disc">Creative Technologist (Experiential / Interactive)</li><li style="list-style-type:disc">Experiential Designer / Interactive Designer</li><li style="list-style-type:disc">Real-Time Systems Developer (TouchDesigner)</li><li style="list-style-type:disc">Technical Director (Experiential / Installations)</li><li style="list-style-type:disc">Interactive Systems Designer</li></ul>
 <hr id="27d1afee-8e0d-80a9-994f-de886a1fa811"/>
-<h2 id="27d1afee-8e0d-8080-8db5-effd914271f0" class="">📍 Target Markets</h2>
-<ul id="27d1afee-8e0d-803b-af47-e7eeabe5006b" class="bulleted-list"><li style="list-style-type:disc">NYC / Brooklyn</li></ul>
-<ul id="27d1afee-8e0d-80d6-974f-db03ece1ad04" class="bulleted-list"><li style="list-style-type:disc">Remote prep &amp; development</li></ul>
-<ul id="27e1afee-8e0d-80ba-8f4c-f5af1c3bd951" class="bulleted-list"><li style="list-style-type:disc">Open to travel for productions and installations across the U.S. and internationally</li></ul>
+<h2 id="27d1afee-8e0d-8080-8db5-effd914271f0" class="">📍 Location &amp; Availability</h2>
+<ul class="bulleted-list"><li style="list-style-type:disc">NYC / Brooklyn-based</li><li style="list-style-type:disc">Remote for development and system design</li><li style="list-style-type:disc">Available for travel for productions, installations, and live events (U.S. &amp; international)</li></ul>
 <hr id="27d1afee-8e0d-80de-9df8-fb052943af4c"/>
-<h2 id="27d1afee-8e0d-80e3-b9bf-ddb0bf855f54" class="">💼 Notable Projects &amp; Clients</h2>
-<table id="27d1afee-8e0d-8051-bb25-e13fb700a01e" class="simple-table"><thead class="simple-table-header"><tr id="27d1afee-8e0d-803e-b826-d26bb414483b"><th id="iBhI" class="simple-table-header-color simple-table-header">Project</th><th id="}{c;" class="simple-table-header-color simple-table-header">Role</th><th id="d;Ar" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="27d1afee-8e0d-80f2-9c90-dcee95197029"><td id="iBhI" class="">AT&amp;T Flagship Retail</td><td id="}{c;" class="">Creative Technologist &amp; Motion Design</td><td id="d;Ar" class="">Designed and deployed real-time motion graphics and system workflows for flagship retail installations, enhancing customer engagement with dynamic branded media.</td></tr><tr id="27d1afee-8e0d-801e-8abc-d8bb2ba86d61"><td id="iBhI" class="">Mousetrappe / Medici XD</td><td id="}{c;" class="">Creative Programmer</td><td id="d;Ar" class="">Built an interactive projection-mapped dining experience, integrating custom TouchDesigner systems with high-end content delivery for immersive storytelling.</td></tr><tr id="27d1afee-8e0d-8025-a8af-f2931b0b9199"><td id="iBhI" class="">Star Wars Outlaws Premiere</td><td id="}{c;" class="">Motion Graphics &amp; Projection Mapping</td><td id="d;Ar" class="">Created projection-mapped visuals for the global premiere event; collaborated with agency partners and on-set production crews to deliver an immersive branded spectacle.</td></tr><tr id="27d1afee-8e0d-80bf-a7c1-d9220a3d9f1e"><td id="iBhI" class="">Cushman &amp; Wakefield</td><td id="}{c;" class="">Creative Technologist &amp; Motion Design</td><td id="d;Ar" class="">Developed a large-scale interactive installation for a corporate client, integrating generative visuals and custom systems programming to transform real-time audience interaction into branded digital content.</td></tr><tr id="27d1afee-8e0d-807c-a66d-c3fd296ce426"><td id="iBhI" class="">History Channel</td><td id="}{c;" class="">Laser Designer &amp; Programmer</td><td id="d;Ar" class="">Designed and programmed a custom laser installation for a History Channel show.</td></tr></tbody></table>
+<h2 id="27d1afee-8e0d-80e3-b9bf-ddb0bf855f54" class="">💼 Selected Work</h2>
+<div class="selected-work">
+<p><strong>Super Bowl LX — PepsiCo (Pepsi Quarterback Blitz)</strong><br/>Lead Creative Technologist / Systems Developer</p>
+<p class="">Led development of a multiplayer interactive installation for Super Bowl LX, designing real-time system architecture, scoring logic, and sensor integration.</p>
+<p class="">Designed for continuous operation and high player throughput, translating physical gameplay into real-time visual feedback across large-scale LED displays in a high-pressure live event environment.</p>
+<p><strong>Star Wars Outlaws — Global Premiere</strong><br/>Real-Time Visual Systems / Projection Mapping</p>
+<p class="">Developed projection-mapped visuals for a global launch event, collaborating with agency and production teams to deliver large-scale branded media in a live environment.</p>
+<p><strong>AT&amp;T Flagship Retail</strong><br/>Creative Technologist</p>
+<p class="">Designed and deployed real-time visual systems for flagship retail installations, integrating dynamic branded content across physical space to enhance in-store engagement.</p>
+<p><strong>Cushman &amp; Wakefield</strong><br/>Creative Technologist</p>
+<p class="">Developed a large-scale interactive installation, translating real-time audience interaction into responsive generative visual systems.</p>
+<p><strong>Mousetrappe / Medici XD</strong><br/>Creative Programmer</p>
+<p class="">Built an interactive projection-mapped dining experience using TouchDesigner, integrating real-time systems with high-end content delivery for immersive storytelling.</p>
+</div>
 <hr id="27d1afee-8e0d-8052-a768-d294c3a8ba6a"/>
 <h2 id="27d1afee-8e0d-806e-956f-e2bb9f7f8610" class="">🟢 Availability</h2>
-<!--<p id="27d1afee-8e0d-8041-8626-ce2752e87781" class=""><strong>💸 Freelance</strong>: $850-$1,200/day | $85-$120/hr typical</p>-->
-<p id="27d1afee-8e0d-8046-8e76-ff7cd0bbdf98" class=""><strong>💼 Full-time</strong>: Open to discussion based on role &amp; responsibilities</p>
-<p id="27d1afee-8e0d-8078-8151-cde44b19b118" class=""><strong>📅 Availability</strong>: Q4 2025 (NYC / Remote)</p>
-<hr id="27d1afee-8e0d-80b6-9f4d-f205ad80f6ad"/>
-<h2 id="27d1afee-8e0d-80d2-b3cf-ddea0f75670a" class="">🔗 Links</h2>
-<ul id="27d1afee-8e0d-80ba-b383-c10783d0ac3a" class="bulleted-list"><li style="list-style-type:disc">Portfolio: <a href="http://www.lukehildreth.com" target="_blank">lukehildreth.com</a></li></ul>
-<ul id="27d1afee-8e0d-8031-ab3c-c4ac1bf55b7f" class="bulleted-list"><li style="list-style-type:disc">LinkedIn: <a href="https://www.linkedin.com/in/lukehildreth" target="_blank">linkedin.com/in/lukehildreth</a></li></ul>
-<ul id="27d1afee-8e0d-8001-8ee1-f45115204fcf" class="bulleted-list"><li style="list-style-type:disc">Resume (PDF): <a href="https://tinyurl.com/mr22jr2f" target="_blank">LukeResume</a></li></ul>
-<ul id="27d1afee-8e0d-80d7-9156-fa04fa5a4cb3" class="bulleted-list"><li style="list-style-type:disc">Instagram: <a href="https://www.instagram.com/laser.luke.one" target="_blank">@laser.luke.one</a></li></ul>
+<p class="">Open to select project-based, contract, and full-time opportunities.</p>
 <hr id="27d1afee-8e0d-8061-a8d1-e17b4c1268fb"/>
-<h2 id="tldr" class="">⚡ TL;DR</h2>
-<p class="tldr-content">
-<strong>Who:</strong> Creative Technologist & Real-Time Designer<br/>
-<strong>What:</strong> Specializing in immersive brand activations and real-time content<br/>
-<strong>Where:</strong> Brooklyn, NYC (open to travel)<br/>
-<strong>When:</strong> Q4 2025<br/>
-<strong>Contact:</strong> <a href="mailto:luke@artprojectllc.com">luke@artprojectllc.com</a>
-</p>
-<hr/>
-<p id="27d1afee-8e0d-8091-a660-e2173aa10d47" class=""><em>✨ Open to freelance and full-time roles in creative technology, experiential design, and live event production. Let&#x27;s create something unforgettable!</em></p>
 <p id="27d1afee-8e0d-8004-8bd1-c73757142e5b" class="">
 </p></div></article>
 <span class="sans" style="font-size:14px;padding-top:2em"></span>
@@ -953,23 +921,18 @@ function toggleTheme() {
 	html.setAttribute('data-theme', newTheme);
 	localStorage.setItem('theme', newTheme);
 	
-	// Update icon
+	// Update icon (when theme toggle button is present)
 	const icon = document.getElementById('theme-icon');
-	icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+	if (icon) icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 }
 
-function scrollToTLDR() {
-	const tldr = document.getElementById('tldr');
-	if (tldr) {
-		tldr.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	}
-}
-
-// Set initial icon based on theme
+// Set initial icon when theme toggle button is present
 window.addEventListener('DOMContentLoaded', () => {
-	const currentTheme = document.documentElement.getAttribute('data-theme');
 	const icon = document.getElementById('theme-icon');
-	icon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+	if (icon) {
+		const currentTheme = document.documentElement.getAttribute('data-theme');
+		icon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+	}
 });
 </script>
 </body>
